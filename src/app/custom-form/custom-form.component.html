@@ -1,0 +1,15 @@
+<!--Form of Customer Master Maintenance-credit-->
+<form [formGroup]="myform" novalidate>
+  <div class="c-form">
+    <div class="row l-row line_padding" *ngFor="let formLineContents of formContents">
+        <div class="col-xs-12">
+            <!-- <ng-template *ngFor="let formLineContent of formLineContents"> -->
+            <div class="{{formLineContent.divStyle}}" *ngFor="let formLineContent of formLineContents">
+              <label>{{formLineContent.label}}</label>
+              <input class="{{formLineContent.inputStyle}}" name="{{formLineContent.inputName}}" type="text" formControlName="{{formLineContent.formControlName}}">
+            </div>
+          <!-- </ng-template> -->
+        </div>
+    </div>
+  </div>
+</form>
